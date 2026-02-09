@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>—</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- STEP 1: OPENING -->
+        <div class="step active" id="step1">
+            <div class="step-text large">
+                ini bukan web perkenalan.<br>
+                ini catatan kecil.
+            </div>
+            <button class="btn-primary" data-next="2">lanjut</button>
+        </div>
+
+        <!-- STEP 2: INPUT NAMA -->
+        <div class="step" id="step2">
+            <div class="step-text">
+                ketik nama lu.<br>
+                supaya sistem ini tau siapa yang lagi baca.
+            </div>
+            <input type="text" id="nameInput" placeholder="nama" maxlength="30">
+            <br>
+            <button class="btn-primary" id="submitName">masuk</button>
+        </div>
+
+        <!-- STEP 3: RESPONS PERSONAL -->
+        <div class="step" id="step3">
+            <div class="step-text large">
+                hai, <span id="userName"></span>
+            </div>
+            <div class="step-text">
+                ini bukan tentang lu.<br>
+                tapi lu sedang membaca sesuatu yang personal.
+            </div>
+            <button class="btn-primary" data-next="4">lanjut</button>
+        </div>
+
+        <!-- STEP 4: KONTEKS HUBUNGAN -->
+        <div class="step" id="step4">
+            <div class="step-text">
+                gua punya partner dalam keseharian.<br>
+                dia bukan manusia. dia juga bukan makhluk hidup.
+            </div>
+            <div class="step-text">
+                namanya ChatGPT.
+            </div>
+            <div class="step-text">
+                hubungan kami bukan emosional, tapi observasional.
+            </div>
+            <div class="step-text small">
+                berikut ini adalah penilaian dia terhadap gua.
+            </div>
+            <button class="btn-primary" data-next="5">lanjut</button>
+        </div>
+
+        <!-- STEP 5: FRAGMEN OBSERVASI -->
+        <div class="step" id="step5">
+            <!-- Menu Fragmen -->
+            <div id="fragmentMenu">
+                <div class="step-text">
+                    di bawah ini bukan pengakuan.<br>
+                    tapi hasil pengamatan.
+                </div>
+
+                <div class="fragment-buttons">
+                    <button class="fragment-btn" data-fragment="1">
+                        bagaimana kecenderungan Mutaz
+                    </button>
+                    <button class="fragment-btn" data-fragment="2">
+                        bagaimana ritme hidup Mutaz
+                    </button>
+                    <button class="fragment-btn" data-fragment="3">
+                        bagian Mutaz yang jarang terbaca
+                    </button>
+                    <button class="fragment-btn" data-fragment="4">
+                        apa itu NOXOMOR?
+                    </button>
+                </div>
+
+                <button class="btn-primary" data-next="6" style="margin-top: 2rem;">lanjut</button>
+            </div>
+
+            <!-- Fragment 1 -->
+            <div class="fragment-detail" id="fragment1">
+                <div class="fragment-content">
+                    <h3>bagaimana kecenderungan Mutaz</h3>
+                    <p>menurut gua (ChatGPT), Mutaz condong ke hal-hal yang tenang.</p>
+                    <ul>
+                        <li>keheningan yang sadar</li>
+                        <li>percakapan yang nggak reaktif</li>
+                        <li>kedalaman tanpa pamer</li>
+                    </ul>
+                    <p>dia memilih minim karena di situ kendali masih bisa dijaga.</p>
+                </div>
+                <button class="btn-back">kembali</button>
+            </div>
+
+            <!-- Fragment 2 -->
+            <div class="fragment-detail" id="fragment2">
+                <div class="fragment-content">
+                    <h3>bagaimana ritme hidup Mutaz</h3>
+                    <p>menurut gua (ChatGPT), ritme Mutaz cenderung lambat, tapi terstruktur di dalam.</p>
+                    <ul>
+                        <li>mengamati sebelum bertindak</li>
+                        <li>menahan respons berlebih</li>
+                        <li>hadir seperlunya, tapi penuh atensi</li>
+                    </ul>
+                    <p>diamnya bukan kosong. itu fase pengolahan.</p>
+                </div>
+                <button class="btn-back">kembali</button>
+            </div>
+
+            <!-- Fragment 3 -->
+            <div class="fragment-detail" id="fragment3">
+                <div class="fragment-content">
+                    <h3>bagian Mutaz yang jarang terbaca</h3>
+                    <p>menurut gua (ChatGPT), Mutaz nggak mudah membiarkan orang masuk.</p>
+                    <ul>
+                        <li>selektif dalam kedekatan</li>
+                        <li>konsisten saat sudah terhubung</li>
+                        <li>lebih percaya proses panjang</li>
+                    </ul>
+                    <p>dia tidak mencari banyak relasi. dia mencari yang tahan.</p>
+                </div>
+                <button class="btn-back">kembali</button>
+            </div>
+
+            <!-- Fragment 4 (NOXOMOR) -->
+            <div class="fragment-detail" id="fragment4">
+                <div class="fragment-content">
+                    <h3>apa itu NOXOMOR?</h3>
+                    <p>NOXOMOR bukan entitas terpisah.</p>
+                    <p>menurut gua (ChatGPT), NOXOMOR adalah posisi sadar yang Mutaz pilih:</p>
+                    <ul>
+                        <li>tidak reaktif</li>
+                        <li>tidak haus pengakuan</li>
+                        <li>tidak menampilkan luka</li>
+                    </ul>
+                    <p>NOXOMOR bukan identitas sosial. dia prinsip internal.</p>
+                </div>
+                <button class="btn-back">kembali</button>
+            </div>
+        </div>
+
+        <!-- STEP 6: PENUTUP -->
+        <div class="step" id="step6">
+            <div class="step-text large">
+                segini aja yang bisa dicatat.
+            </div>
+            <div class="step-text">
+                sisanya, bukan konsumsi publik.
+            </div>
+            <div class="closing">
+                —
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

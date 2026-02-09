@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #0a0a0a;
+    color: #d4d4d4;
+    line-height: 1.8;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+/* STEP SYSTEM */
+.step {
+    opacity: 0;
+    display: none;
+    text-align: center;
+    width: 100%;
+}
+
+.step.active {
+    display: block;
+    animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* TYPOGRAPHY */
+.step-text {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+    line-height: 1.9;
+}
+
+.step-text.large {
+    font-size: 1.3rem;
+    line-height: 2;
+}
+
+.step-text.small {
+    font-size: 0.95rem;
+    color: #999;
+    margin-top: 1rem;
+}
+
+/* BUTTONS */
+button {
+    background: transparent;
+    border: 1px solid #444;
+    color: #d4d4d4;
+    padding: 0.7rem 2rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    font-weight: 300;
+    margin-top: 1rem;
+}
+
+button:hover {
+    border-color: #888;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    /* Inherits from button */
+}
+
+/* INPUT */
+input[type="text"] {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #444;
+    color: #d4d4d4;
+    padding: 0.8rem 0;
+    font-size: 1.1rem;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    letter-spacing: 0.5px;
+    font-family: inherit;
+}
+
+input[type="text"]:focus {
+    border-bottom-color: #888;
+}
+
+input[type="text"]::placeholder {
+    color: #555;
+}
+
+input[type="text"].error {
+    border-bottom-color: #aa0000;
+}
+
+/* FRAGMENT SYSTEM */
+#fragmentMenu {
+    width: 100%;
+}
+
+.fragment-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.fragment-btn {
+    background: transparent;
+    border: 1px solid #333;
+    color: #aaa;
+    padding: 1rem 1.5rem;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+    margin: 0;
+}
+
+.fragment-btn:hover {
+    border-color: #555;
+    color: #d4d4d4;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* FRAGMENT DETAIL */
+.fragment-detail {
+    display: none;
+    width: 100%;
+}
+
+.fragment-detail.active {
+    display: block;
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.fragment-content {
+    text-align: left;
+    padding: 2rem;
+    border-left: 1px solid #333;
+    background: rgba(255, 255, 255, 0.01);
+    margin-bottom: 2rem;
+}
+
+.fragment-content h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #888;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.fragment-content p {
+    font-size: 1rem;
+    line-height: 1.9;
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.fragment-content ul {
+    list-style: none;
+    margin: 1.5rem 0;
+    padding-left: 1rem;
+}
+
+.fragment-content li {
+    margin-bottom: 0.7rem;
+    font-size: 0.95rem;
+    color: #aaa;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.fragment-content li:before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: #555;
+}
+
+.btn-back {
+    background: transparent;
+    border: 1px solid #333;
+    color: #888;
+    padding: 0.7rem 2rem;
+    margin-top: 1rem;
+}
+
+.btn-back:hover {
+    border-color: #555;
+    color: #aaa;
+}
+
+/* CLOSING */
+.closing {
+    margin-top: 4rem;
+    font-size: 1rem;
+    color: #666;
+    font-weight: 300;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    .step-text {
+        font-size: 1rem;
+    }
+
+    .step-text.large {
+        font-size: 1.15rem;
+    }
+
+    .fragment-content {
+        padding: 1.5rem;
+    }
+
+    button {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .step-text {
+        font-size: 0.95rem;
+    }
+
+    .step-text.large {
+        font-size: 1.05rem;
+    }
+
+    .fragment-content {
+        padding: 1rem;
+    }
+
+    input[type="text"] {
+        font-size: 1rem;
+    }
+}
