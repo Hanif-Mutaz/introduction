@@ -165,10 +165,34 @@ input[type="text"].error {
 
 .fragment-content {
     text-align: left;
-    padding: 2rem;
+    padding: 2.5rem;
     border-left: 1px solid #333;
     background: rgba(255, 255, 255, 0.01);
     margin-bottom: 2rem;
+    transition: border-color 0.5s ease;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.fragment-content::-webkit-scrollbar {
+    width: 4px;
+}
+
+.fragment-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.fragment-content::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 2px;
+}
+
+.fragment-content::-webkit-scrollbar-thumb:hover {
+    background: #444;
+}
+
+.fragment-content:hover {
+    border-left-color: #444;
 }
 
 .fragment-content h3 {
@@ -193,11 +217,12 @@ input[type="text"].error {
 }
 
 .fragment-content li {
-    margin-bottom: 0.7rem;
+    margin-bottom: 1rem;
     font-size: 0.95rem;
     color: #aaa;
     position: relative;
     padding-left: 1.2rem;
+    line-height: 1.7;
 }
 
 .fragment-content li:before {
@@ -205,6 +230,23 @@ input[type="text"].error {
     position: absolute;
     left: 0;
     color: #555;
+}
+
+.section-label {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+.conclusion {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #222;
+    color: #bbb;
+    font-size: 1.05rem;
+    line-height: 2;
 }
 
 .btn-back {
